@@ -1,3 +1,15 @@
+// Memory.js
+export const config = {
+    name: 'Memory Extension',
+    variables: [{
+      key: 'DATABASE_URL',
+      name: 'Database Connection String',
+      description: 'Neon PostgreSQL connection string'
+    }]
+  };
+  
+  import { createClient } from '@neondatabase/serverless';
+
 import { createClient } from '@neondatabase/serverless';
 
 const client = createClient(process.env.DATABASE_URL);
